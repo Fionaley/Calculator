@@ -1,4 +1,5 @@
 
+
 # 🧮 Advanced Calculator (Vanilla JavaScript)
 
 A responsive, feature-rich calculator built using **HTML, CSS, and JavaScript**, designed to demonstrate safe expression evaluation, keyboard interaction, and modern UI styling without external libraries.
@@ -64,7 +65,9 @@ calculator/
 
 * Modern **glassmorphism-inspired** UI
 * Gradient-based operator and action buttons
+* Scrollable display for long expressions
 * Responsive layout optimized for mobile and desktop
+* Visual separation between history and current input
 
 All styling is handled purely with CSS—no frameworks required.
 
@@ -138,6 +141,4 @@ http://localhost:8000/index.html
 
 Open source.
 Free to use, modify, and extend for educational or personal projects.
-
----
 

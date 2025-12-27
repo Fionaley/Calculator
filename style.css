@@ -1,0 +1,133 @@
+/* ===== RESET & BASE ===== */
+*{
+  box-sizing:border-box;
+  font-family: Segoe UI, Roboto, Arial, sans-serif;
+}
+
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  background:linear-gradient(135deg,#0f172a,#071034);
+  color:#e6eef8;
+}
+
+/* ===== CALCULATOR CONTAINER ===== */
+.calc{
+  width:340px;
+  background:rgba(255,255,255,0.04);
+  padding:18px;
+  border-radius:16px;
+  box-shadow:0 20px 40px rgba(2,6,23,0.7);
+}
+
+/* ===== SCREEN ===== */
+.screen{
+  background:linear-gradient(180deg,#3f5286,#0b2f6b);
+  padding:16px;
+  border-radius:12px;
+  margin-bottom:14px;
+}
+
+.history{
+  font-size:13px;
+  color:#9fb4d8;
+  min-height:18px;
+  text-align:right;
+  margin-bottom:4px;
+}
+
+.display {
+  height: 80px;
+  padding: 16px;
+  font-size: 2.2rem;
+  text-align: right;
+  border-radius: 14px;
+  background: linear-gradient(180deg,#01153f,#020617);
+  letter-spacing: 0.05em;
+
+  /* 🔥 Scrollable behavior */
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE / Edge */
+}
+
+.display::-webkit-scrollbar{
+  display: none;                  /* Chrome / Safari */
+}
+
+
+
+
+/* ===== KEYS GRID ===== */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+
+/* ===== BUTTON BASE ===== */
+.key {
+  height: 58px;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#092431,#7b5ead);
+  color: var(--num);
+  font-size: 1.5rem;
+  backdrop-filter: blur(6px);
+  transition: transform .08s ease, .15s;
+}
+.key.op:hover,
+.key.equals:hover {
+  box-shadow: 0 0 16px rgba(139,92,246,.45);
+}
+.key:hover {
+  transform: scale(1.04);
+}
+.key:active {
+  transform: scale(0.96);
+}
+
+
+/* ===== OPERATORS ===== */
+.key.op {
+  background: linear-gradient(135deg,#0ea5e9,#7c3aed);
+  color: white;
+  font-weight: 600;
+}
+
+
+/* ===== EQUALS ===== */
+.key.eq {
+  background: linear-gradient(135deg,#059669,#10b981);
+  color: white;
+  font-size: 1.3rem;
+}
+
+
+/* ===== CLEAR & DELETE ===== */
+.key.del {
+  background:linear-gradient(135deg,#ef4444,#fb7185);
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* ===== SIZE MODIFIERS ===== */
+.key.tall{
+  grid-row:span 2;
+}
+
+.key.wide{
+  grid-column:span 2;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width:360px){
+  .calc{width:94vw}
+  .display{font-size:28px}
+  .key{padding:14px;font-size:16px}
+}
